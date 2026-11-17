@@ -1,0 +1,10 @@
+# The figures were drawn with Python 3.12 and these versions; newer ones should work.
+numpy>=1.26
+scipy>=1.15
+matplotlib>=3.10
+python-ternary>=1.0.8
+Pillow>=12.0
+jupyter
+nbclient>=0.11
+# The figures set their text with LaTeX in Palatino: a LaTeX installation with the psnfss fonts and
+# the amssymb package is needed as well (for example, TeX Live).

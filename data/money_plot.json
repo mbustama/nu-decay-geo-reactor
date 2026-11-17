@@ -1,0 +1,337 @@
+{
+ "paper": {
+  "title": "Geoneutrinos (and reactor neutrinos) do not visibly decay",
+  "authors": [
+   "Mauricio Bustamante"
+  ],
+  "arxiv": null,
+  "repository": "https://github.com/mbustama/nu-decay-geo-reactor"
+ },
+ "content": "The numbers of the paper's figure money_plot.pdf: every call that its plotting code makes for data, with its arguments and its result.",
+ "calls": [
+  {
+   "function": "published_bounds",
+   "args": [],
+   "kwargs": {},
+   "result": {
+    "t2k_minos_nu3": {
+     "low": 8.438614832e-12,
+     "high": 1.175378494e-11
+    },
+    "kamland_reactor_nu2": {
+     "low": 1.4e-09,
+     "high": 1.4e-09
+    },
+    "solar_antinu_nu2": {
+     "low": 0.0011,
+     "high": 0.067
+    },
+    "solar_nu2_dirac": {
+     "low": 0.0004,
+     "high": 0.0004
+    },
+    "solar_antinu_nu3": {
+     "low": 7e-05,
+     "high": 7e-05
+    },
+    "sn1987a_nu1": {
+     "low": 120000.0,
+     "high": 120000.0
+    },
+    "sn1987a_nu2": {
+     "low": 120000.0,
+     "high": 120000.0
+    },
+    "glashow_nu1": {
+     "low": 0.00291,
+     "high": 0.00291
+    },
+    "glashow_nu2": {
+     "low": 0.00126,
+     "high": 0.00126
+    }
+   }
+  },
+  {
+   "function": "our_limits",
+   "args": [
+    "io_n1_n3",
+    "log10_tau1_over_m1"
+   ],
+   "kwargs": {},
+   "result": {
+    "__tuple__": [
+     3.663304009e-09,
+     {
+      "borexino": 8.013032426e-09,
+      "kamland": 3.405645974e-09,
+      "snoplus": 8.581531406e-10,
+      "juno": 2.599101723e-09
+     }
+    ]
+   }
+  },
+  {
+   "function": "reactors_alone",
+   "args": [
+    "io_n1_n3",
+    "log10_tau1_over_m1"
+   ],
+   "kwargs": {},
+   "result": 1.772163768e-09
+  },
+  {
+   "function": "our_limits",
+   "args": [
+    "io_n2_n1_n3",
+    "log10_tau1_over_m1"
+   ],
+   "kwargs": {},
+   "result": {
+    "__tuple__": [
+     3.663286664e-09,
+     {
+      "borexino": 6.884992914e-09,
+      "kamland": 1.498085359e-09,
+      "snoplus": 8.581506112e-10,
+      "juno": 1.274560329e-09
+     }
+    ]
+   }
+  },
+  {
+   "function": "reactors_alone",
+   "args": [
+    "io_n2_n1_n3",
+    "log10_tau1_over_m1"
+   ],
+   "kwargs": {},
+   "result": 1.315873016e-09
+  },
+  {
+   "function": "our_limits",
+   "args": [
+    "io_n2_n3",
+    "log10_tau2_over_m2"
+   ],
+   "kwargs": {},
+   "result": {
+    "__tuple__": [
+     3.795203528e-10,
+     {
+      "borexino": 0.0,
+      "kamland": 2.573254929e-10,
+      "snoplus": 1.067285542e-10,
+      "juno": 3.170513113e-10
+     }
+    ]
+   }
+  },
+  {
+   "function": "reactors_alone",
+   "args": [
+    "io_n2_n3",
+    "log10_tau2_over_m2"
+   ],
+   "kwargs": {},
+   "result": 3.765443471e-10
+  },
+  {
+   "function": "our_limits",
+   "args": [
+    "io_n2_n1",
+    "log10_tau2_over_m2"
+   ],
+   "kwargs": {},
+   "result": {
+    "__tuple__": [
+     1.239646499e-09,
+     {
+      "borexino": 0.0,
+      "kamland": 2.276659603e-10,
+      "snoplus": 1.713956185e-09,
+      "juno": 4.979981043e-10
+     }
+    ]
+   }
+  },
+  {
+   "function": "reactors_alone",
+   "args": [
+    "io_n2_n1",
+    "log10_tau2_over_m2"
+   ],
+   "kwargs": {},
+   "result": 1.428561618e-09
+  },
+  {
+   "function": "our_limits",
+   "args": [
+    "io_n2_n1_n3",
+    "log10_tau2_over_m2"
+   ],
+   "kwargs": {},
+   "result": {
+    "__tuple__": [
+     1.225910236e-09,
+     {
+      "borexino": 0.0,
+      "kamland": 8.639032522e-11,
+      "snoplus": 7.524112133e-10,
+      "juno": 4.238813567e-10
+     }
+    ]
+   }
+  },
+  {
+   "function": "reactors_alone",
+   "args": [
+    "io_n2_n1_n3",
+    "log10_tau2_over_m2"
+   ],
+   "kwargs": {},
+   "result": 3.998533259e-10
+  },
+  {
+   "function": "our_limits",
+   "args": [
+    "no_n2_n1",
+    "log10_tau2_over_m2"
+   ],
+   "kwargs": {},
+   "result": {
+    "__tuple__": [
+     3.922722928e-10,
+     {
+      "borexino": 0.0,
+      "kamland": 7.190284707e-11,
+      "snoplus": 1.153529586e-10,
+      "juno": 3.987863288e-10
+     }
+    ]
+   }
+  },
+  {
+   "function": "reactors_alone",
+   "args": [
+    "no_n2_n1",
+    "log10_tau2_over_m2"
+   ],
+   "kwargs": {},
+   "result": 3.821037285e-10
+  },
+  {
+   "function": "our_limits",
+   "args": [
+    "no_n3_n2_n1",
+    "log10_tau2_over_m2"
+   ],
+   "kwargs": {},
+   "result": {
+    "__tuple__": [
+     3.92269526e-10,
+     {
+      "borexino": 0.0,
+      "kamland": 7.235019616e-11,
+      "snoplus": 1.153437749e-10,
+      "juno": 3.987881722e-10
+     }
+    ]
+   }
+  },
+  {
+   "function": "reactors_alone",
+   "args": [
+    "no_n3_n2_n1",
+    "log10_tau2_over_m2"
+   ],
+   "kwargs": {},
+   "result": 3.821029959e-10
+  },
+  {
+   "function": "our_limits",
+   "args": [
+    "no_n3_n1",
+    "log10_tau3_over_m3"
+   ],
+   "kwargs": {},
+   "result": {
+    "__tuple__": [
+     1.687761422e-11,
+     {
+      "borexino": 0.0,
+      "kamland": 0.0,
+      "snoplus": 0.0,
+      "juno": 1.542890441e-11
+     }
+    ]
+   }
+  },
+  {
+   "function": "reactors_alone",
+   "args": [
+    "no_n3_n1",
+    "log10_tau3_over_m3"
+   ],
+   "kwargs": {},
+   "result": 1.677483712e-11
+  },
+  {
+   "function": "our_limits",
+   "args": [
+    "no_n3_n2",
+    "log10_tau3_over_m3"
+   ],
+   "kwargs": {},
+   "result": {
+    "__tuple__": [
+     1.68359154e-11,
+     {
+      "borexino": 0.0,
+      "kamland": 0.0,
+      "snoplus": 0.0,
+      "juno": 1.636398242e-11
+     }
+    ]
+   }
+  },
+  {
+   "function": "reactors_alone",
+   "args": [
+    "no_n3_n2",
+    "log10_tau3_over_m3"
+   ],
+   "kwargs": {},
+   "result": 1.678988605e-11
+  },
+  {
+   "function": "our_limits",
+   "args": [
+    "no_n3_n2_n1",
+    "log10_tau3_over_m3"
+   ],
+   "kwargs": {},
+   "result": {
+    "__tuple__": [
+     1.683591988e-11,
+     {
+      "borexino": 0.0,
+      "kamland": 0.0,
+      "snoplus": 0.0,
+      "juno": 1.635325601e-11
+     }
+    ]
+   }
+  },
+  {
+   "function": "reactors_alone",
+   "args": [
+    "no_n3_n2_n1",
+    "log10_tau3_over_m3"
+   ],
+   "kwargs": {},
+   "result": 1.6894429e-11
+  }
+ ],
+ "constants": {}
+}

@@ -1,0 +1,2654 @@
+{
+ "paper": {
+  "title": "Geoneutrinos (and reactor neutrinos) do not visibly decay",
+  "authors": [
+   "Mauricio Bustamante"
+  ],
+  "arxiv": null,
+  "repository": "https://github.com/mbustama/nu-decay-geo-reactor"
+ },
+ "content": "Every lower limit on the neutrino lifetime-to-mass ratio, tau_i/m_i, that the paper reports: each decay channel, each experiment and combination, each Earth model, at 90% and 95% C.L., from data and expected.",
+ "how_to_read": {
+  "lower_limit_s_per_eV": "The limits, in s/eV, keyed as [channel][lifetime][fit][Earth model][C.L.][observed or expected]. null where that fit sets no limit.",
+  "channel": "The decay channel; see 'channels'. A chain, in which the daughter of the first decay decays in turn, limits the lifetimes of both of its parents.",
+  "lifetime": "tau1_over_m1, tau2_over_m2 or tau3_over_m3: the lifetime-to-mass ratio limited, of nu_1, nu_2 or nu_3.",
+  "fit": "The experiment or the combination of experiments fitted; see 'fits'.",
+  "Earth model": "The class of bulk-silicate-Earth model, which fixes the Earth's radiogenic power, or the power left free between 9.4 and 39.6 TW; see 'earth_models'.",
+  "C.L.": "90 or 95, the confidence level of the one-sided lower limit.",
+  "observed": "The limit from the experiments' data.",
+  "expected": "The limit from the Asimov data set, in which every bin holds its expected number of events without decay.",
+  "statistics": "Frequentist limits from the profile likelihood ratio: at each trial lifetime, every other parameter is fitted. The limit is where the test statistic reaches 1.64 (90% C.L.) or 2.71 (95% C.L.); the limits on tau3_over_m3 are read at thresholds calibrated with simulated experiments instead."
+ },
+ "channels": {
+  "io_n1_n3": {
+   "ordering": "inverted",
+   "latex": "\\nu_1 \\to \\nu_3",
+   "lifetimes": [
+    "tau1_over_m1"
+   ]
+  },
+  "io_n2_n3": {
+   "ordering": "inverted",
+   "latex": "\\nu_2 \\to \\nu_3",
+   "lifetimes": [
+    "tau2_over_m2"
+   ]
+  },
+  "io_n2_n1": {
+   "ordering": "inverted",
+   "latex": "\\nu_2 \\to \\nu_1",
+   "lifetimes": [
+    "tau2_over_m2"
+   ]
+  },
+  "io_n2_n1_n3": {
+   "ordering": "inverted",
+   "latex": "\\nu_2 \\to \\nu_1 \\to \\nu_3",
+   "lifetimes": [
+    "tau2_over_m2",
+    "tau1_over_m1"
+   ]
+  },
+  "no_n2_n1": {
+   "ordering": "normal",
+   "latex": "\\nu_2 \\to \\nu_1",
+   "lifetimes": [
+    "tau2_over_m2"
+   ]
+  },
+  "no_n3_n1": {
+   "ordering": "normal",
+   "latex": "\\nu_3 \\to \\nu_1",
+   "lifetimes": [
+    "tau3_over_m3"
+   ]
+  },
+  "no_n3_n2": {
+   "ordering": "normal",
+   "latex": "\\nu_3 \\to \\nu_2",
+   "lifetimes": [
+    "tau3_over_m3"
+   ]
+  },
+  "no_n3_n2_n1": {
+   "ordering": "normal",
+   "latex": "\\nu_3 \\to \\nu_2 \\to \\nu_1",
+   "lifetimes": [
+    "tau3_over_m3",
+    "tau2_over_m2"
+   ]
+  }
+ },
+ "fits": {
+  "borexino": "Borexino (2020 data release)",
+  "kamland": "KamLAND (2022 data release)",
+  "snoplus": "SNO+ (2026 data release)",
+  "juno": "JUNO (207 days of data, 2026)",
+  "combined_bx_kl_snoplus": "Borexino, KamLAND, and SNO+ combined",
+  "combined_all": "Borexino, KamLAND, SNO+, and JUNO combined"
+ },
+ "earth_models": {
+  "cosmochemical": "Cosmochemical bulk-silicate-Earth model, radiogenic power 9.4 TW",
+  "geochemical": "Geochemical bulk-silicate-Earth model, radiogenic power 16.5 TW",
+  "geodynamical": "Geodynamical bulk-silicate-Earth model, radiogenic power 28.8 TW",
+  "free_radiogenic_power": "Radiogenic power free between 9.4 and 39.6 TW"
+ },
+ "lower_limit_s_per_eV": {
+  "io_n1_n3": {
+   "tau1_over_m1": {
+    "borexino": {
+     "cosmochemical": {
+      "90": {
+       "observed": 2.12145e-08,
+       "expected": 4.1209e-09
+      },
+      "95": {
+       "observed": 1.09108e-08,
+       "expected": 2.75162e-09
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 2.57505e-08,
+       "expected": 6.37845e-09
+      },
+      "95": {
+       "observed": 1.54006e-08,
+       "expected": 4.34255e-09
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.49493e-08,
+       "expected": 1.05095e-08
+      },
+      "95": {
+       "observed": 9.94214e-09,
+       "expected": 7.4413e-09
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 8.01303e-09,
+       "expected": 2.45934e-09
+      },
+      "95": {
+       "observed": 5.97395e-09,
+       "expected": 1.94662e-09
+      }
+     }
+    },
+    "kamland": {
+     "cosmochemical": {
+      "90": {
+       "observed": 7.23672e-09,
+       "expected": 6.17657e-09
+      },
+      "95": {
+       "observed": 4.92658e-09,
+       "expected": 4.32311e-09
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 4.06606e-09,
+       "expected": 9.38962e-09
+      },
+      "95": {
+       "observed": 3.19146e-09,
+       "expected": 6.68611e-09
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 2.53302e-09,
+       "expected": 1.56087e-08
+      },
+      "95": {
+       "observed": 2.14825e-09,
+       "expected": 1.14273e-08
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 3.40565e-09,
+       "expected": 3.11738e-09
+      },
+      "95": {
+       "observed": 2.34543e-09,
+       "expected": 2.63718e-09
+      }
+     }
+    },
+    "snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": 8.65232e-10,
+       "expected": 1.80247e-09
+      },
+      "95": {
+       "observed": 7.2115e-10,
+       "expected": 1.30845e-09
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 8.61029e-10,
+       "expected": 2.14834e-09
+      },
+      "95": {
+       "observed": 7.1762e-10,
+       "expected": 1.56122e-09
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 8.44387e-10,
+       "expected": 2.91121e-09
+      },
+      "95": {
+       "observed": 7.05812e-10,
+       "expected": 2.09641e-09
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 8.58153e-10,
+       "expected": 1.70625e-09
+      },
+      "95": {
+       "observed": 7.11463e-10,
+       "expected": 1.27072e-09
+      }
+     }
+    },
+    "juno": {
+     "cosmochemical": {
+      "90": {
+       "observed": 2.66875e-09,
+       "expected": 1.24971e-09
+      },
+      "95": {
+       "observed": 1.76294e-09,
+       "expected": 9.42988e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 2.63966e-09,
+       "expected": 1.24966e-09
+      },
+      "95": {
+       "observed": 1.75373e-09,
+       "expected": 9.42709e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 2.60895e-09,
+       "expected": 1.25064e-09
+      },
+      "95": {
+       "observed": 1.74306e-09,
+       "expected": 9.42507e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 2.5991e-09,
+       "expected": 1.24918e-09
+      },
+      "95": {
+       "observed": 1.73932e-09,
+       "expected": 9.41729e-10
+      }
+     }
+    },
+    "combined_bx_kl_snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.61139e-08,
+       "expected": 8.00348e-09
+      },
+      "95": {
+       "observed": 8.18694e-09,
+       "expected": 5.74146e-09
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.01494e-08,
+       "expected": 1.13998e-08
+      },
+      "95": {
+       "observed": 7.11344e-09,
+       "expected": 8.29568e-09
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 4.42299e-09,
+       "expected": 1.82253e-08
+      },
+      "95": {
+       "observed": 3.6747e-09,
+       "expected": 1.34871e-08
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 3.59662e-09,
+       "expected": 3.68965e-09
+      },
+      "95": {
+       "observed": 3.0082e-09,
+       "expected": 3.17295e-09
+      }
+     }
+    },
+    "combined_all": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.57531e-08,
+       "expected": 7.92273e-09
+      },
+      "95": {
+       "observed": 8.26318e-09,
+       "expected": 5.68316e-09
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 9.39937e-09,
+       "expected": 1.13298e-08
+      },
+      "95": {
+       "observed": 6.74382e-09,
+       "expected": 8.24075e-09
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 4.38215e-09,
+       "expected": 1.81778e-08
+      },
+      "95": {
+       "observed": 3.67313e-09,
+       "expected": 1.34467e-08
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 3.6633e-09,
+       "expected": 3.7145e-09
+      },
+      "95": {
+       "observed": 3.0638e-09,
+       "expected": 3.19001e-09
+      }
+     }
+    }
+   }
+  },
+  "io_n2_n3": {
+   "tau2_over_m2": {
+    "borexino": {
+     "cosmochemical": {
+      "90": {
+       "observed": 2.11833e-10,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 6.81476e-12,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     }
+    },
+    "kamland": {
+     "cosmochemical": {
+      "90": {
+       "observed": 3.4591e-10,
+       "expected": 4.11284e-10
+      },
+      "95": {
+       "observed": 2.24515e-10,
+       "expected": 2.69646e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 2.214e-10,
+       "expected": 4.39604e-10
+      },
+      "95": {
+       "observed": 1.52715e-10,
+       "expected": 2.79994e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.45428e-10,
+       "expected": 5.61597e-10
+      },
+      "95": {
+       "observed": 1.01499e-10,
+       "expected": 3.28564e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 2.57325e-10,
+       "expected": 3.0346e-10
+      },
+      "95": {
+       "observed": 1.72136e-10,
+       "expected": 2.06324e-10
+      }
+     }
+    },
+    "snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.07604e-10,
+       "expected": 1.26311e-10
+      },
+      "95": {
+       "observed": 7.16289e-11,
+       "expected": 6.48581e-11
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.08966e-10,
+       "expected": 1.22262e-10
+      },
+      "95": {
+       "observed": 7.34203e-11,
+       "expected": 6.20279e-11
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.06689e-10,
+       "expected": 1.17021e-10
+      },
+      "95": {
+       "observed": 7.21364e-11,
+       "expected": 5.82801e-11
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.06729e-10,
+       "expected": 1.19514e-10
+      },
+      "95": {
+       "observed": 7.21576e-11,
+       "expected": 6.02654e-11
+      }
+     }
+    },
+    "juno": {
+     "cosmochemical": {
+      "90": {
+       "observed": 3.17143e-10,
+       "expected": 3.37964e-10
+      },
+      "95": {
+       "observed": 2.40479e-10,
+       "expected": 2.61047e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 3.18762e-10,
+       "expected": 3.37182e-10
+      },
+      "95": {
+       "observed": 2.41312e-10,
+       "expected": 2.60453e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 3.2105e-10,
+       "expected": 3.35878e-10
+      },
+      "95": {
+       "observed": 2.42291e-10,
+       "expected": 2.59462e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 3.17051e-10,
+       "expected": 3.36763e-10
+      },
+      "95": {
+       "observed": 2.4044e-10,
+       "expected": 2.60259e-10
+      }
+     }
+    },
+    "combined_bx_kl_snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": 3.01443e-10,
+       "expected": 5.19587e-10
+      },
+      "95": {
+       "observed": 2.12809e-10,
+       "expected": 3.41316e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 2.20993e-10,
+       "expected": 5.58637e-10
+      },
+      "95": {
+       "observed": 1.68733e-10,
+       "expected": 3.55264e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.8107e-10,
+       "expected": 7.44431e-10
+      },
+      "95": {
+       "observed": 1.3998e-10,
+       "expected": 4.23582e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 2.00709e-10,
+       "expected": 3.98383e-10
+      },
+      "95": {
+       "observed": 1.54005e-10,
+       "expected": 2.76135e-10
+      }
+     }
+    },
+    "combined_all": {
+     "cosmochemical": {
+      "90": {
+       "observed": 6.09596e-10,
+       "expected": 7.48593e-10
+      },
+      "95": {
+       "observed": 4.29911e-10,
+       "expected": 5.33721e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 4.1436e-10,
+       "expected": 7.98947e-10
+      },
+      "95": {
+       "observed": 3.35705e-10,
+       "expected": 5.55037e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 3.30368e-10,
+       "expected": 1.01726e-09
+      },
+      "95": {
+       "observed": 2.77001e-10,
+       "expected": 6.47702e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 3.7952e-10,
+       "expected": 6.06119e-10
+      },
+      "95": {
+       "observed": 3.10984e-10,
+       "expected": 4.52671e-10
+      }
+     }
+    }
+   }
+  },
+  "io_n2_n1": {
+   "tau2_over_m2": {
+    "borexino": {
+     "cosmochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     }
+    },
+    "kamland": {
+     "cosmochemical": {
+      "90": {
+       "observed": 2.24967e-10,
+       "expected": 5.58105e-10
+      },
+      "95": {
+       "observed": 1.68516e-10,
+       "expected": 3.79844e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 5.66622e-10,
+       "expected": 5.76709e-10
+      },
+      "95": {
+       "observed": 2.92527e-10,
+       "expected": 3.85207e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.06845e-08,
+       "expected": 6.91515e-10
+      },
+      "95": {
+       "observed": 4.67709e-09,
+       "expected": 4.30997e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 2.27666e-10,
+       "expected": 4.4481e-10
+      },
+      "95": {
+       "observed": 1.70256e-10,
+       "expected": 3.15349e-10
+      }
+     }
+    },
+    "snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.35803e-09,
+       "expected": 3.64001e-10
+      },
+      "95": {
+       "observed": 7.86255e-10,
+       "expected": 2.15226e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.63609e-09,
+       "expected": 3.7601e-10
+      },
+      "95": {
+       "observed": 9.2878e-10,
+       "expected": 2.19158e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 2.49345e-09,
+       "expected": 4.03659e-10
+      },
+      "95": {
+       "observed": 1.31405e-09,
+       "expected": 2.30061e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.71396e-09,
+       "expected": 2.88466e-10
+      },
+      "95": {
+       "observed": 9.50468e-10,
+       "expected": 1.74238e-10
+      }
+     }
+    },
+    "juno": {
+     "cosmochemical": {
+      "90": {
+       "observed": 4.97967e-10,
+       "expected": 8.07903e-10
+      },
+      "95": {
+       "observed": 4.16255e-10,
+       "expected": 6.2105e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 5.00167e-10,
+       "expected": 8.10109e-10
+      },
+      "95": {
+       "observed": 4.17767e-10,
+       "expected": 6.22118e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 5.02565e-10,
+       "expected": 8.14795e-10
+      },
+      "95": {
+       "observed": 4.19413e-10,
+       "expected": 6.24315e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 4.97998e-10,
+       "expected": 8.06495e-10
+      },
+      "95": {
+       "observed": 4.16279e-10,
+       "expected": 6.19994e-10
+      }
+     }
+    },
+    "combined_bx_kl_snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": 7.61531e-10,
+       "expected": 8.00676e-10
+      },
+      "95": {
+       "observed": 5.15038e-10,
+       "expected": 5.38757e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.65909e-09,
+       "expected": 8.30299e-10
+      },
+      "95": {
+       "observed": 9.33064e-10,
+       "expected": 5.47769e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.0305e-08,
+       "expected": 1.05245e-09
+      },
+      "95": {
+       "observed": 5.10781e-09,
+       "expected": 6.38039e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.07282e-09,
+       "expected": 6.26324e-10
+      },
+      "95": {
+       "observed": 6.55947e-10,
+       "expected": 4.41562e-10
+      }
+     }
+    },
+    "combined_all": {
+     "cosmochemical": {
+      "90": {
+       "observed": 9.62765e-10,
+       "expected": 9.7094e-10
+      },
+      "95": {
+       "observed": 6.93431e-10,
+       "expected": 7.01771e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.82317e-09,
+       "expected": 1.00462e-09
+      },
+      "95": {
+       "observed": 1.05137e-09,
+       "expected": 7.14131e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.06295e-08,
+       "expected": 1.18586e-09
+      },
+      "95": {
+       "observed": 5.20994e-09,
+       "expected": 7.83673e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.23965e-09,
+       "expected": 8.67408e-10
+      },
+      "95": {
+       "observed": 8.14114e-10,
+       "expected": 6.49638e-10
+      }
+     }
+    }
+   }
+  },
+  "io_n2_n1_n3": {
+   "tau2_over_m2": {
+    "borexino": {
+     "cosmochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     }
+    },
+    "kamland": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.21106e-10,
+       "expected": 3.42156e-10
+      },
+      "95": {
+       "observed": 9.01678e-11,
+       "expected": 2.40593e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.07406e-10,
+       "expected": 3.75397e-10
+      },
+      "95": {
+       "observed": 8.10489e-11,
+       "expected": 2.67087e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 9.33736e-11,
+       "expected": 3.91928e-10
+      },
+      "95": {
+       "observed": 7.08692e-11,
+       "expected": 2.78899e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 8.63903e-11,
+       "expected": 2.61928e-10
+      },
+      "95": {
+       "observed": 6.54598e-11,
+       "expected": 1.93536e-10
+      }
+     }
+    },
+    "snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": 3.69187e-10,
+       "expected": 9.68985e-11
+      },
+      "95": {
+       "observed": 1.9761e-10,
+       "expected": 4.87721e-11
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 4.3863e-10,
+       "expected": 1.05703e-10
+      },
+      "95": {
+       "observed": 2.22428e-10,
+       "expected": 5.43593e-11
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 5.46768e-10,
+       "expected": 1.3957e-10
+      },
+      "95": {
+       "observed": 2.59967e-10,
+       "expected": 7.49997e-11
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 7.52411e-10,
+       "expected": 1.01511e-10
+      },
+      "95": {
+       "observed": 3.17581e-10,
+       "expected": 5.18021e-11
+      }
+     }
+    },
+    "juno": {
+     "cosmochemical": {
+      "90": {
+       "observed": 4.23852e-10,
+       "expected": 5.04112e-10
+      },
+      "95": {
+       "observed": 3.33318e-10,
+       "expected": 3.84241e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 4.29975e-10,
+       "expected": 5.1256e-10
+      },
+      "95": {
+       "observed": 3.36403e-10,
+       "expected": 3.88487e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 4.43011e-10,
+       "expected": 5.33471e-10
+      },
+      "95": {
+       "observed": 3.43052e-10,
+       "expected": 3.98211e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 4.23881e-10,
+       "expected": 5.06225e-10
+      },
+      "95": {
+       "observed": 3.33342e-10,
+       "expected": 3.85389e-10
+      }
+     }
+    },
+    "combined_bx_kl_snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": 7.60559e-10,
+       "expected": 4.61483e-10
+      },
+      "95": {
+       "observed": 5.12189e-10,
+       "expected": 3.30263e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.03555e-09,
+       "expected": 5.02533e-10
+      },
+      "95": {
+       "observed": 5.83269e-10,
+       "expected": 3.59787e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 7.49238e-10,
+       "expected": 5.30711e-10
+      },
+      "95": {
+       "observed": 4.19288e-10,
+       "expected": 3.78454e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.05135e-09,
+       "expected": 3.53143e-10
+      },
+      "95": {
+       "observed": 5.27752e-10,
+       "expected": 2.62043e-10
+      }
+     }
+    },
+    "combined_all": {
+     "cosmochemical": {
+      "90": {
+       "observed": 9.62278e-10,
+       "expected": 7.65897e-10
+      },
+      "95": {
+       "observed": 6.92073e-10,
+       "expected": 5.87183e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.2122e-09,
+       "expected": 7.93952e-10
+      },
+      "95": {
+       "observed": 7.75636e-10,
+       "expected": 6.0524e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.06566e-09,
+       "expected": 8.20792e-10
+      },
+      "95": {
+       "observed": 6.84068e-10,
+       "expected": 6.21227e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.22591e-09,
+       "expected": 7.11755e-10
+      },
+      "95": {
+       "observed": 7.86305e-10,
+       "expected": 5.44288e-10
+      }
+     }
+    }
+   },
+   "tau1_over_m1": {
+    "borexino": {
+     "cosmochemical": {
+      "90": {
+       "observed": 2.46212e-08,
+       "expected": 3.49031e-09
+      },
+      "95": {
+       "observed": 1.45019e-08,
+       "expected": 2.59527e-09
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 2.06734e-08,
+       "expected": 5.11319e-09
+      },
+      "95": {
+       "observed": 1.31152e-08,
+       "expected": 3.8558e-09
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 9.39621e-09,
+       "expected": 7.80767e-09
+      },
+      "95": {
+       "observed": 7.18782e-09,
+       "expected": 6.10396e-09
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 6.88499e-09,
+       "expected": 2.45934e-09
+      },
+      "95": {
+       "observed": 5.46845e-09,
+       "expected": 1.94662e-09
+      }
+     }
+    },
+    "kamland": {
+     "cosmochemical": {
+      "90": {
+       "observed": 2.37718e-09,
+       "expected": 6.17657e-09
+      },
+      "95": {
+       "observed": 1.85775e-09,
+       "expected": 4.32311e-09
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 2.01158e-09,
+       "expected": 9.38962e-09
+      },
+      "95": {
+       "observed": 1.65925e-09,
+       "expected": 6.68611e-09
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.66924e-09,
+       "expected": 1.56087e-08
+      },
+      "95": {
+       "observed": 1.44102e-09,
+       "expected": 1.14273e-08
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.49809e-09,
+       "expected": 3.11681e-09
+      },
+      "95": {
+       "observed": 1.3193e-09,
+       "expected": 2.63713e-09
+      }
+     }
+    },
+    "snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": 8.65227e-10,
+       "expected": 1.22163e-09
+      },
+      "95": {
+       "observed": 7.21155e-10,
+       "expected": 9.81644e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 8.61033e-10,
+       "expected": 1.42178e-09
+      },
+      "95": {
+       "observed": 7.17017e-10,
+       "expected": 1.12181e-09
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 8.44391e-10,
+       "expected": 2.04567e-09
+      },
+      "95": {
+       "observed": 7.0581e-10,
+       "expected": 1.52514e-09
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 8.58151e-10,
+       "expected": 1.32211e-09
+      },
+      "95": {
+       "observed": 7.11463e-10,
+       "expected": 1.06715e-09
+      }
+     }
+    },
+    "juno": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.27449e-09,
+       "expected": 8.30927e-10
+      },
+      "95": {
+       "observed": 8.66196e-10,
+       "expected": 6.27671e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.28457e-09,
+       "expected": 8.4032e-10
+      },
+      "95": {
+       "observed": 8.69867e-10,
+       "expected": 6.31424e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.31529e-09,
+       "expected": 8.62778e-10
+      },
+      "95": {
+       "observed": 8.80952e-10,
+       "expected": 6.417e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.27456e-09,
+       "expected": 8.33962e-10
+      },
+      "95": {
+       "observed": 8.6622e-10,
+       "expected": 6.29255e-10
+      }
+     }
+    },
+    "combined_bx_kl_snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.5796e-08,
+       "expected": 5.58589e-09
+      },
+      "95": {
+       "observed": 8.68388e-09,
+       "expected": 4.19388e-09
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 9.56072e-09,
+       "expected": 8.26512e-09
+      },
+      "95": {
+       "observed": 6.88782e-09,
+       "expected": 6.37924e-09
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 4.42226e-09,
+       "expected": 1.24478e-08
+      },
+      "95": {
+       "observed": 3.67564e-09,
+       "expected": 9.98138e-09
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 3.59662e-09,
+       "expected": 3.43545e-09
+      },
+      "95": {
+       "observed": 3.0082e-09,
+       "expected": 3.04209e-09
+      }
+     }
+    },
+    "combined_all": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.52016e-08,
+       "expected": 6.46012e-09
+      },
+      "95": {
+       "observed": 8.53752e-09,
+       "expected": 4.84092e-09
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 8.94539e-09,
+       "expected": 9.15944e-09
+      },
+      "95": {
+       "observed": 6.58626e-09,
+       "expected": 7.04485e-09
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 4.38205e-09,
+       "expected": 1.3573e-08
+      },
+      "95": {
+       "observed": 3.67313e-09,
+       "expected": 1.07958e-08
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 3.66329e-09,
+       "expected": 3.69867e-09
+      },
+      "95": {
+       "observed": 3.06376e-09,
+       "expected": 3.18785e-09
+      }
+     }
+    }
+   }
+  },
+  "no_n2_n1": {
+   "tau2_over_m2": {
+    "borexino": {
+     "cosmochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     }
+    },
+    "kamland": {
+     "cosmochemical": {
+      "90": {
+       "observed": 4.97398e-11,
+       "expected": 2.02141e-10
+      },
+      "95": {
+       "observed": 3.32581e-11,
+       "expected": 1.30343e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 6.55905e-11,
+       "expected": 2.08947e-10
+      },
+      "95": {
+       "observed": 4.32094e-11,
+       "expected": 1.32148e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 5.10778e-11,
+       "expected": 2.41159e-10
+      },
+      "95": {
+       "observed": 3.29331e-11,
+       "expected": 1.4422e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 7.19028e-11,
+       "expected": 1.6556e-10
+      },
+      "95": {
+       "observed": 4.71546e-11,
+       "expected": 1.09536e-10
+      }
+     }
+    },
+    "snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.15423e-10,
+       "expected": 1.08805e-10
+      },
+      "95": {
+       "observed": 7.67302e-11,
+       "expected": 5.68224e-11
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.15137e-10,
+       "expected": 1.05321e-10
+      },
+      "95": {
+       "observed": 7.67009e-11,
+       "expected": 5.397e-11
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.15631e-10,
+       "expected": 1.00217e-10
+      },
+      "95": {
+       "observed": 7.74538e-11,
+       "expected": 4.96504e-11
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.15353e-10,
+       "expected": 9.84586e-11
+      },
+      "95": {
+       "observed": 7.71378e-11,
+       "expected": 4.75053e-11
+      }
+     }
+    },
+    "juno": {
+     "cosmochemical": {
+      "90": {
+       "observed": 3.98785e-10,
+       "expected": 3.9523e-10
+      },
+      "95": {
+       "observed": 3.01908e-10,
+       "expected": 3.05829e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 4.03985e-10,
+       "expected": 3.94042e-10
+      },
+      "95": {
+       "observed": 3.04318e-10,
+       "expected": 3.04939e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 4.10094e-10,
+       "expected": 3.92091e-10
+      },
+      "95": {
+       "observed": 3.07112e-10,
+       "expected": 3.03467e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 3.98786e-10,
+       "expected": 3.9357e-10
+      },
+      "95": {
+       "observed": 3.01915e-10,
+       "expected": 3.04685e-10
+      }
+     }
+    },
+    "combined_bx_kl_snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.47705e-10,
+       "expected": 2.89419e-10
+      },
+      "95": {
+       "observed": 1.07002e-10,
+       "expected": 1.93311e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.29298e-10,
+       "expected": 2.9904e-10
+      },
+      "95": {
+       "observed": 9.54471e-11,
+       "expected": 1.82078e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.12235e-10,
+       "expected": 2.62643e-10
+      },
+      "95": {
+       "observed": 8.30918e-11,
+       "expected": 1.64775e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.24119e-10,
+       "expected": 2.54066e-10
+      },
+      "95": {
+       "observed": 9.18064e-11,
+       "expected": 1.74039e-10
+      }
+     }
+    },
+    "combined_all": {
+     "cosmochemical": {
+      "90": {
+       "observed": 5.87283e-10,
+       "expected": 6.03282e-10
+      },
+      "95": {
+       "observed": 4.1998e-10,
+       "expected": 4.47446e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 4.09724e-10,
+       "expected": 6.26733e-10
+      },
+      "95": {
+       "observed": 3.31951e-10,
+       "expected": 4.57909e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 3.33553e-10,
+       "expected": 7.18403e-10
+      },
+      "95": {
+       "observed": 2.78793e-10,
+       "expected": 4.92535e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 3.92272e-10,
+       "expected": 5.42296e-10
+      },
+      "95": {
+       "observed": 3.19024e-10,
+       "expected": 4.1139e-10
+      }
+     }
+    }
+   }
+  },
+  "no_n3_n1": {
+   "tau3_over_m3": {
+    "borexino": {
+     "cosmochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     }
+    },
+    "kamland": {
+     "cosmochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     }
+    },
+    "snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     }
+    },
+    "juno": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.54287e-11,
+       "expected": 1.23483e-11
+      },
+      "95": {
+       "observed": 1.01832e-11,
+       "expected": 7.36518e-12
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.54416e-11,
+       "expected": 1.23411e-11
+      },
+      "95": {
+       "observed": 1.01936e-11,
+       "expected": 7.36172e-12
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.54557e-11,
+       "expected": 1.23361e-11
+      },
+      "95": {
+       "observed": 1.02014e-11,
+       "expected": 7.35509e-12
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.54289e-11,
+       "expected": 1.23387e-11
+      },
+      "95": {
+       "observed": 1.01831e-11,
+       "expected": 7.35842e-12
+      }
+     }
+    },
+    "combined_bx_kl_snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     }
+    },
+    "combined_all": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.67112e-11,
+       "expected": 1.23283e-11
+      },
+      "95": {
+       "observed": 1.1136e-11,
+       "expected": 7.3475e-12
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.69196e-11,
+       "expected": 1.23233e-11
+      },
+      "95": {
+       "observed": 1.12942e-11,
+       "expected": 7.34351e-12
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.72715e-11,
+       "expected": 1.23144e-11
+      },
+      "95": {
+       "observed": 1.15397e-11,
+       "expected": 7.3366e-12
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.68776e-11,
+       "expected": 1.2324e-11
+      },
+      "95": {
+       "observed": 1.12593e-11,
+       "expected": 7.34257e-12
+      }
+     }
+    }
+   }
+  },
+  "no_n3_n2": {
+   "tau3_over_m3": {
+    "borexino": {
+     "cosmochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     }
+    },
+    "kamland": {
+     "cosmochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     }
+    },
+    "snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     }
+    },
+    "juno": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.6353e-11,
+       "expected": 1.21839e-11
+      },
+      "95": {
+       "observed": 1.08822e-11,
+       "expected": 7.23887e-12
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.63605e-11,
+       "expected": 1.21802e-11
+      },
+      "95": {
+       "observed": 1.08843e-11,
+       "expected": 7.23572e-12
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.63654e-11,
+       "expected": 1.21719e-11
+      },
+      "95": {
+       "observed": 1.0892e-11,
+       "expected": 7.22955e-12
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.6364e-11,
+       "expected": 1.21801e-11
+      },
+      "95": {
+       "observed": 1.08904e-11,
+       "expected": 7.23569e-12
+      }
+     }
+    },
+    "combined_bx_kl_snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     }
+    },
+    "combined_all": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.6797e-11,
+       "expected": 1.21829e-11
+      },
+      "95": {
+       "observed": 1.12015e-11,
+       "expected": 7.23673e-12
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.68426e-11,
+       "expected": 1.21791e-11
+      },
+      "95": {
+       "observed": 1.1237e-11,
+       "expected": 7.23354e-12
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.69013e-11,
+       "expected": 1.21707e-11
+      },
+      "95": {
+       "observed": 1.12821e-11,
+       "expected": 7.22736e-12
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.68359e-11,
+       "expected": 1.21789e-11
+      },
+      "95": {
+       "observed": 1.12298e-11,
+       "expected": 7.2335e-12
+      }
+     }
+    }
+   }
+  },
+  "no_n3_n2_n1": {
+   "tau3_over_m3": {
+    "borexino": {
+     "cosmochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     }
+    },
+    "kamland": {
+     "cosmochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     }
+    },
+    "snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     }
+    },
+    "juno": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.63531e-11,
+       "expected": 1.21839e-11
+      },
+      "95": {
+       "observed": 1.08822e-11,
+       "expected": 7.23888e-12
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.63603e-11,
+       "expected": 1.21802e-11
+      },
+      "95": {
+       "observed": 1.08843e-11,
+       "expected": 7.23572e-12
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.63654e-11,
+       "expected": 1.21719e-11
+      },
+      "95": {
+       "observed": 1.0892e-11,
+       "expected": 7.22955e-12
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.63533e-11,
+       "expected": 1.21772e-11
+      },
+      "95": {
+       "observed": 1.08819e-11,
+       "expected": 7.23401e-12
+      }
+     }
+    },
+    "combined_bx_kl_snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     }
+    },
+    "combined_all": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.6797e-11,
+       "expected": 1.21827e-11
+      },
+      "95": {
+       "observed": 1.12015e-11,
+       "expected": 7.23671e-12
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.68426e-11,
+       "expected": 1.2179e-11
+      },
+      "95": {
+       "observed": 1.1237e-11,
+       "expected": 7.23353e-12
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.68773e-11,
+       "expected": 1.21706e-11
+      },
+      "95": {
+       "observed": 1.12737e-11,
+       "expected": 7.22735e-12
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.68359e-11,
+       "expected": 1.21789e-11
+      },
+      "95": {
+       "observed": 1.12298e-11,
+       "expected": 7.23351e-12
+      }
+     }
+    }
+   },
+   "tau2_over_m2": {
+    "borexino": {
+     "cosmochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": null,
+       "expected": null
+      },
+      "95": {
+       "observed": null,
+       "expected": null
+      }
+     }
+    },
+    "kamland": {
+     "cosmochemical": {
+      "90": {
+       "observed": 4.96278e-11,
+       "expected": 1.99634e-10
+      },
+      "95": {
+       "observed": 3.31357e-11,
+       "expected": 1.29297e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 6.59212e-11,
+       "expected": 2.0637e-10
+      },
+      "95": {
+       "observed": 4.34104e-11,
+       "expected": 1.31126e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 5.1204e-11,
+       "expected": 2.38052e-10
+      },
+      "95": {
+       "observed": 3.29967e-11,
+       "expected": 1.4312e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 7.23502e-11,
+       "expected": 1.63867e-10
+      },
+      "95": {
+       "observed": 4.74199e-11,
+       "expected": 1.08728e-10
+      }
+     }
+    },
+    "snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.15365e-10,
+       "expected": 1.08805e-10
+      },
+      "95": {
+       "observed": 7.66527e-11,
+       "expected": 5.68224e-11
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.15107e-10,
+       "expected": 1.0532e-10
+      },
+      "95": {
+       "observed": 7.66361e-11,
+       "expected": 5.397e-11
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.15444e-10,
+       "expected": 1.00212e-10
+      },
+      "95": {
+       "observed": 7.71482e-11,
+       "expected": 4.96504e-11
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.15344e-10,
+       "expected": 9.84587e-11
+      },
+      "95": {
+       "observed": 7.69124e-11,
+       "expected": 4.75053e-11
+      }
+     }
+    },
+    "juno": {
+     "cosmochemical": {
+      "90": {
+       "observed": 3.98785e-10,
+       "expected": 3.9523e-10
+      },
+      "95": {
+       "observed": 3.01908e-10,
+       "expected": 3.05829e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 4.03985e-10,
+       "expected": 3.94042e-10
+      },
+      "95": {
+       "observed": 3.04318e-10,
+       "expected": 3.04939e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 4.10095e-10,
+       "expected": 3.92091e-10
+      },
+      "95": {
+       "observed": 3.07112e-10,
+       "expected": 3.03467e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 3.98788e-10,
+       "expected": 3.9357e-10
+      },
+      "95": {
+       "observed": 3.01914e-10,
+       "expected": 3.04685e-10
+      }
+     }
+    },
+    "combined_bx_kl_snoplus": {
+     "cosmochemical": {
+      "90": {
+       "observed": 1.46328e-10,
+       "expected": 2.86193e-10
+      },
+      "95": {
+       "observed": 1.06332e-10,
+       "expected": 1.91927e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 1.29186e-10,
+       "expected": 2.95679e-10
+      },
+      "95": {
+       "observed": 9.5529e-11,
+       "expected": 1.81958e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 1.12013e-10,
+       "expected": 2.62442e-10
+      },
+      "95": {
+       "observed": 8.2947e-11,
+       "expected": 1.64705e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 1.24033e-10,
+       "expected": 2.35472e-10
+      },
+      "95": {
+       "observed": 9.1784e-11,
+       "expected": 1.55938e-10
+      }
+     }
+    },
+    "combined_all": {
+     "cosmochemical": {
+      "90": {
+       "observed": 5.87249e-10,
+       "expected": 6.03283e-10
+      },
+      "95": {
+       "observed": 4.1998e-10,
+       "expected": 4.47447e-10
+      }
+     },
+     "geochemical": {
+      "90": {
+       "observed": 4.09722e-10,
+       "expected": 6.26733e-10
+      },
+      "95": {
+       "observed": 3.31951e-10,
+       "expected": 4.57909e-10
+      }
+     },
+     "geodynamical": {
+      "90": {
+       "observed": 3.33554e-10,
+       "expected": 7.18403e-10
+      },
+      "95": {
+       "observed": 2.78793e-10,
+       "expected": 4.92534e-10
+      }
+     },
+     "free_radiogenic_power": {
+      "90": {
+       "observed": 3.9227e-10,
+       "expected": 5.42286e-10
+      },
+      "95": {
+       "observed": 3.19024e-10,
+       "expected": 4.11389e-10
+      }
+     }
+    }
+   }
+  }
+ }
+}
