@@ -1,6 +1,6 @@
 # The paper's plotting code, its functions that read the analysis's results replaced by ones that read
 # the release's data/ files (at the end of this file).
-"""Figures E.1 to E.3 of the paper: how much each parameter moves the 90% limit from data on tau_1/m_1.
+"""Figures E.1 and E.2 of the paper: how much each parameter moves the 90% limit from data on tau_1/m_1.
 
 A row per parameter, its bars the relative change of the limit when the parameter is held at its
 best fit plus or minus its fitted width, every other parameter fitted.  Rows are ranked by the
@@ -9,8 +9,7 @@ them.  A side that would leave the parameter's range has no bar.  The figure of 
 experiments combined has a second panel, on the left, with each parameter's prior and its fit to
 data, as shifts from the prior's center in widths of the prior.
 
-The notebook draws the figures with :func:`figure_combined_all`, :func:`figure_experiments` and
-:func:`figure_juno_and_three`.
+The notebook draws the figures with :func:`figure_combined_all` and :func:`figure_experiments`.
 """
 
 from __future__ import annotations
@@ -245,40 +244,32 @@ def figure_combined_all():
 
 
 def figure_experiments():
-    """The experiments' figures, for the appendix: SNO+ on the left, Borexino over KamLAND on the right.
+    """The four experiments' figure, for the appendix: Borexino and KamLAND on top, SNO+ and JUNO below.
+
+    Every row has the same height in all four panels, so their bars compare: a panel with fewer rows than
+    its neighbour leaves the rest empty below, and Borexino's holds the legend there.  JUNO's axis stops
+    at :data:`CUT_ALL`, as all four's does: its rate of geoneutrinos and sin2 th12 move its limit beyond
+    +100%, which would squeeze every other bar.  BX+KL+SNO+ has no panel: its impacts are those of
+    all four.
 
     Returns:
         The matplotlib figure.
     """
     figure_style.use()
-    n = {site: len(shown(site)[0]) for site in ("borexino", "kamland", "snoplus")}
-    fig = plt.figure(figsize=(20.0, 15.0))
-    grid = fig.add_gridspec(2, 2, height_ratios=[n["borexino"] + 2, n["kamland"] + 2], wspace=1.05, hspace=0.85)
+    n = {site: len(shown(site)[0]) for site in ("borexino", "kamland", "snoplus", "juno")}
+    top, bottom = max(n["borexino"], n["kamland"]), max(n["snoplus"], n["juno"])
+    fig = plt.figure(figsize=(20.0, 21.0))
+    grid = fig.add_gridspec(2, 2, height_ratios=[top + 0.2, bottom + 0.2], wspace=1.05, hspace=0.16)
     axes = {}
-    for spec, site in ((grid[:, 0], "snoplus"), (grid[0, 1], "borexino"), (grid[1, 1], "kamland")):
-        axes[site] = fig.add_subplot(spec)
-        draw(axes[site], site, label_size=19.0, most_labels=MOST_LABELS_NARROW)
-    # In the gap between Borexino's panel and KamLAND's, widened for it: inside a panel, the box
-    # covered bars at its font size.
-    top, bottom = axes["borexino"].get_position(), axes["kamland"].get_position()
-    legend(fig, loc="center", anchor=(0.5 * (bottom.x0 + bottom.x1), 0.5 * (top.y0 + bottom.y1) - 0.012))
-    # One label for the three panels: the right ones are too narrow to hold it.
-    fig.supxlabel(r"Relative change of the $90\%$ C.L. limit [\%]", fontsize=25, y=0.055)
-    return fig
-
-
-def figure_juno_and_three():
-    """JUNO's figure beside BX+KL+SNO+'s, for the appendix.
-
-    Returns:
-        The matplotlib figure.
-    """
-    figure_style.use()
-    fig, axes = plt.subplots(1, 2, figsize=(20.0, 17.0), gridspec_kw={"wspace": 1.05})
-    for ax, site in zip(axes, ("juno", "combined_bx_kl_snoplus")):
-        draw(ax, site, label_size=19.0, most_labels=MOST_LABELS_NARROW)
-    legend(axes[1])
-    fig.supxlabel(r"Relative change of the $90\%$ C.L. limit [\%]", fontsize=25, y=0.06)
+    for (row, col), site in (((0, 0), "borexino"), ((0, 1), "kamland"), ((1, 0), "snoplus"), ((1, 1), "juno")):
+        axes[site] = fig.add_subplot(grid[row, col])
+        draw(axes[site], site, label_size=19.0, most_labels=MOST_LABELS_NARROW,
+             right_edge=CUT_ALL if site == "juno" else None)
+        rows = top if row == 0 else bottom
+        axes[site].set_ylim(rows - 0.4, -0.6)
+    legend(axes["borexino"], loc="lower center")
+    # One label for the four panels.
+    fig.supxlabel(r"Relative change of the $90\%$ C.L. limit [\%]", fontsize=25, y=0.072)
     return fig
 
 

@@ -137,9 +137,9 @@ needed too. The notebook reads only `data/`; it needs none of the paper's analys
 | C.1: Lower limits from data compared with those of simulated experiments without decay | `figures/brazil.pdf` | `data/brazil.json` |
 | D.1: Coverage of the 90% C.L. limits, tested with simulated experiments with decay | `figures/coverage.pdf` | `data/coverage.json` |
 | E.1: Fitted values of the parameters of the four experiments combined, with the radiogenic power free, and how much each moves the limit | `figures/impacts.pdf` | `data/impacts.json` |
-| E.2 and E.3: How much each parameter moves the limits of each experiment, and of Borexino, KamLAND, and SNO+ combined | `figures/impacts_experiments.pdf`, `figures/impacts_juno_three.pdf` | `data/impacts_experiments.json` |
-| E.4: How the lifetime trades off against the parameters that move most with it, fit by fit | `figures/corner_rows.pdf` | `data/corner_rows.json` |
-| H.1: The constraint on the solar mixing parameters that our fits use | `figures/nufit_constraints.pdf` | `data/nufit_constraints.json` |
+| E.2: How much each parameter moves the limit of each experiment | `figures/impacts_experiments.pdf` | `data/impacts_experiments.json` |
+| E.3: How the lifetime trades off against the parameters that move most with it, fit by fit | `figures/corner_rows.pdf` | `data/corner_rows.json` |
+| G.1: The constraint on the solar mixing parameters that our fits use | `figures/nufit_constraints.pdf` | `data/nufit_constraints.json` |
 
 ## Data
 

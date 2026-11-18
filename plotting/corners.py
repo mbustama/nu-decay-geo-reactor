@@ -1,6 +1,6 @@
 # The paper's plotting code, its functions that read the analysis's results replaced by ones that read
 # the release's data/ files (at the end of this file).
-"""Figure E.4 of the paper: how the lifetime trades off against the parameters that move most with it.
+"""Figure E.3 of the paper: how the lifetime trades off against the parameters that move most with it.
 
 A row per fit: the test statistic against tau_1/m_1, then the lifetime against each of the four
 parameters that move most with it.  A pair's 68% and 95% C.L. regions come from its profiled
