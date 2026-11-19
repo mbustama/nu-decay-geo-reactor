@@ -4,7 +4,7 @@
   "authors": [
    "Mauricio Bustamante"
   ],
-  "arxiv": null,
+  "arxiv": "2611.23978",
   "repository": "https://github.com/mbustama/nu-decay-geo-reactor"
  },
  "content": "Every lower limit on the neutrino lifetime-to-mass ratio, tau_i/m_i, that the paper reports: each decay channel, each experiment and combination, each Earth model, at 90% and 95% C.L., from data and expected.",

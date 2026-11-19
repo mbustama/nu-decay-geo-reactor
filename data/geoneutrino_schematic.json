@@ -4,7 +4,7 @@
   "authors": [
    "Mauricio Bustamante"
   ],
-  "arxiv": null,
+  "arxiv": "2611.23978",
   "repository": "https://github.com/mbustama/nu-decay-geo-reactor"
  },
  "content": "The numbers of the paper's figure geoneutrino_schematic.pdf: every call that its plotting code makes for data, with its arguments and its result.",

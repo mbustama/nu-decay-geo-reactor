@@ -1,8 +1,7 @@
 # Geoneutrinos (and reactor neutrinos) do not visibly decay
 
 Data and code for the paper *Geoneutrinos (and reactor neutrinos) do not visibly decay*, by Mauricio
-Bustamante (Niels Bohr International Academy, Niels Bohr Institute, University of Copenhagen).
-arXiv: reference to be added here.
+Bustamante. arXiv: [2611.23978](https://arxiv.org/abs/2611.23978).
 
 <p align="center">
   <img src="figures/geoneutrino_schematic.png" width="520" alt="A cut through the Earth with a neutrino detector at its surface: geoneutrinos reach it from the crust, the mantle, and across the core, and may decay on the way.">
@@ -178,7 +177,20 @@ fraction of a pixel along their lines. Files larger than 10 MB are gzip-compress
 
 ## How to cite
 
-Reference to be added here once the paper is on arXiv.
+If you use these data or this code, please cite the paper:
+
+M. Bustamante, *Geoneutrinos (and reactor neutrinos) do not visibly decay*, arXiv:2611.23978 [hep-ph] (2026).
+
+```bibtex
+@article{Bustamante:2611.23978,
+    author = "Bustamante, Mauricio",
+    title = "{Geoneutrinos (and reactor neutrinos) do not visibly decay}",
+    eprint = "2611.23978",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ph",
+    year = "2026"
+}
+```
 
 ## License
 
