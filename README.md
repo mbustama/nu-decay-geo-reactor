@@ -20,6 +20,13 @@ s eV<sup>-1</sup> when the radiogenic power of the Earth is left free, and
 $\tau_1/m_1 > 4.4 \times 10^{-9}$ to $1.6 \times 10^{-8}$ s eV<sup>-1</sup> when it is taken from Earth
 models. It sets limits on every other channel it considers too.
 
+The image below links to a three-minute animated video, on YouTube, that shows how the paper tests
+neutrino decay with geoneutrinos and reactor antineutrinos.
+
+<p align="center">
+  <a href="https://youtu.be/Ys99UIN3-Zw"><img src="https://i.ytimg.com/vi/Ys99UIN3-Zw/maxresdefault.jpg" width="520" alt="Video on YouTube: Geoneutrinos (and reactor neutrinos) do not visibly decay"></a>
+</p>
+
 This repository holds every limit of the paper, in one file, and the numbers and code that redraw every
 figure of the paper.
 
